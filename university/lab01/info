@@ -1,0 +1,31 @@
+++++++++++++++++++++++even-password
+strings ./even-password
+thecakeisalie
+r2 > ?
+r2 > p?
+pd@main
+str.thecakeisalie
++++++++++++++++++++++++++halting-problem
+af@main   --->analyse
+pdf@main  --->pdf disassemble function main
+rax2 0x186a0 -->
+___________________in vim
+:%!xxd
+<edit stuff>
+:%!xxd -r
+
+
+_________________straceme
+si cmp expects
+then strace ./strackme
+./straceme  sixoclockofachristmasmorning
+
+
+
+
+
+
+
+
+____________-
+

@@ -1,0 +1,72 @@
+_________________lesson 4
+.data
+# ssize_t write(int fd, const void *buf, size_t count)
+HelloWorldString:
+  ascii "Hello World"
+.text
+.globl main
+movl $4, %eax #__write system call
+movl $1, %ebx # fd
+movl $HelloWorldString, %ecx
+movl $11, %edx
+int $0x80
+movl $1,eax # exit sys call
+movl $0, %ebx #status
+int $0x80
+_______________lesson 5
+.data 
+  .byte = 1byte
+  .ascii = string
+  asicz = Null terminator string
+  .int = 32 bit integer
+  .short = 16 bit integet
+  .float = single precision floating point number
+  .double = double precision floating point number
+  space is reserved at compile time
+
+.bss # created at runtime
+  .comm 
+  .lcomm 
+#gcc -ggdb -Wall -ggdb test.S -m32 -o test
+#________in gdb
+i variables
+
+###___________sixth
+between register
+  -movl = 32bit value
+    movl %eax, $ebx
+    
+  -movw = 16bit value
+    movw %ax,%bx
+  -movb = 8bit value
+    movb %ah,%bh
+
+
+  movl $eax, location
+  movl location,$ebx
+
+  ##immediate value into register
+    movl $10, %ebx
+  ##immediate value into mem location
+    movb $10,location
+  #####move array value
+  #baseaddress (offset, index, size)
+  #integer is 4bytes
+  movl $eax integerarray(0,2,4)
+
+###Placing a $ before a variable
+#moves the address of the variable rather then the actual valu
+#
+#
+#lets say you want to move a value into a memory location inside a register
+movl $9,(%edi) _-> place value 9 into memory location pointed to by %edi_
+movl $9,4(%edi) _->offset from %edit this ie: plus 4 bytes
+movl $9,-4(%edi) _->offset from %edit this ie: minus 2 bytes
+
+
+ _______________________________________Seven  
+if df is 1 decremented
+if df is 0 increment clear
+
+
+

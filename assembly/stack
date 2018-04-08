@@ -1,0 +1,21 @@
+high memory
+__________________
+
+parameter 1 esp()
+_________________
+20 12(%ebp)
+10  8(%ebp) second argument
+ret 4(%ebp) first argument
+ebp-old (%ebp)
+/////inside function <-------ebp points here
+intC -4(%ebp)     functions use the stack for local variables
+intB -8(%ebp)     
+///////////        <------top of the stack
+
+                          #pushl $13 string length onto the stack
+                          #pushl $HelloWorld pointer onto the stack
+_________________
+top of the stack<fifo>
+ebp points to the stop of stack
+
+
